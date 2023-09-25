@@ -1,3 +1,3 @@
-FROM openjdk:8-jre-alpine
-
-COPY target/sample-java-app*.jar /var/lib/docker/tmp/buildkit-mount514627754/target/sample-java-app.jar
+FROM tomcat:8.0.20-jre8
+# Dummy text to test 
+COPY target/java-web-app*.war /usr/local/tomcat/webapps/java-web-app.war
