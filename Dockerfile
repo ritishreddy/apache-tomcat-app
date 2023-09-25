@@ -4,8 +4,8 @@ FROM openjdk:8-jre-alpine
 # Set the working directory
 WORKDIR /app
 
-# Copy the compiled Spring Boot JAR file into the container
-COPY target/sample-java-app-1.0-SNAPSHOT.jar .
+# Assuming your Maven build generates a JAR file in the target directory
+COPY target/*.jar app.jar
 
 # Define the command to run your Spring Boot application
-CMD ["java", "-jar", "sample-java-app-1.0-SNAPSHOT.jar"]
+CMD ["java", "-jar", "app.jar"]
