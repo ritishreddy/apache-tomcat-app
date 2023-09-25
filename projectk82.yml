@@ -1,32 +1,36 @@
-apiVersion: apps/v1
-kind: Deployment
+
+---
+apiVersion: v1
+kind: ReplicationController
 metadata:
-  name: sample-java-app-deployment
+  labels:
+    name: javawebapp
+  name: java-controller
 spec:
-  replicas: 3
-  selector:
-    matchLabels:
-      app: sample-java-app
+  replicas: 1
   template:
     metadata:
       labels:
-        app: sample-java-app
+        name: javawebapp
     spec:
       containers:
-      - name: sample-java-app
-        image: tomcat:latest
+      - image: dockerhandson/java-web-app
+        name: javawebapp
         ports:
-        - containerPort: 8080
+        - name: javawebapp
+          containerPort: 8080  
 ---
+# Node Port Service
 apiVersion: v1
 kind: Service
 metadata:
-  name: sample-java-app-service
+  labels:
+    name: javawebapp
+  name: javawebapp
 spec:
-  selector:
-    app: sample-java-app
+  type: NodePort
   ports:
-    - protocol: TCP
-      port: 80
+    - port: 8080
       targetPort: 8080
-  type: LoadBalancer
+  selector:
+    name: javawebapp
