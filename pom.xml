@@ -94,8 +94,15 @@
 	</dependencies>
 	
 	<distributionManagement>
+<servers xmlns="http://3.27.61.135:8081">
+    <server>
+      <username>admin</username>
+      <password>admin123</password>
+      <id>NEXUS_ADMIN</id>
+    </server>
+  </servers>
 	    <repository>
-	      <id>nexus</id>
+	      <id>NEXUS_ADMIN</id>
 	      <name>Releases Nexus Repository</name>
 	      <url>http://3.27.61.135:8081/repository/sample-rel/</url>
 	    </repository>
