@@ -99,7 +99,6 @@
       <password>admin123</password>
       <id>NEXUS_ADMIN</id>
     </server>
-  </servers>
 	    <repository>
 	      <id>NEXUS_ADMIN</id>
 	      <name>Releases Nexus Repository</name>
