@@ -94,7 +94,6 @@
 	</dependencies>
 	
 	<distributionManagement>
-<servers xmlns="http://3.27.61.135:8081">
     <server>
       <username>admin</username>
       <password>admin123</password>
