@@ -14,7 +14,7 @@ spec:
         name: javawebapp
     spec:
       containers:
-      - image: dockerhandson/java-web-app
+      - image: ritish20/java-web-app
         name: javawebapp
         ports:
         - name: javawebapp
