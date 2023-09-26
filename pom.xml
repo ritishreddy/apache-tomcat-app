@@ -94,18 +94,14 @@
 	</dependencies>
 	
 	<distributionManagement>
-    <server>
-      <username>admin</username>
-      <password>admin123</password>
-      <id>NEXUS_ADMIN</id>
-    </server>
+
 	    <repository>
 	      <id>NEXUS_ADMIN</id>
 	      <name>Releases Nexus Repository</name>
 	      <url>http://3.27.61.135:8081/repository/sample-rel/</url>
 	    </repository>
 	    <snapshotRepository>
-	      <id>nexus</id>
+	      <id>NEXUS_ADMIN</id>
 	      <name>Snapshot Nexus Repository </name>
 	      <url>http://3.27.61.135:8081/repository/sample-snap/</url>
 	    </snapshotRepository>
