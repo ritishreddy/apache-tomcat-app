@@ -28,7 +28,7 @@
             <repositories>
                 <repository>
                     <id>NEXUS_ADMIN</id>
-                    <url>http://3.104.223.90:8081/repository/sample-rel/</url>
+                    <url>http://3.104.223.90:8081/repository/sample-snap/</url>
                     <releases>
                         <enabled>false</enabled>
                     </releases>
