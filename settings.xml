@@ -16,8 +16,8 @@
         <mirror>
             <id>mirrorId</id>
             <mirrorOf>central</mirrorOf>
-            <name>Nexus Repository</name>
-            <url>http://your-nexus-server/repository/maven-central/</url>
+            <name>sample-rel</name>
+            <url>http://3.104.223.90:8081/repository/sample-rel/</url>
         </mirror>
     </mirrors>
 
@@ -27,8 +27,8 @@
             <!-- Enable snapshots for this profile -->
             <repositories>
                 <repository>
-                    <id>snapshots</id>
-                    <url>http://your-nexus-server/repository/maven-snapshots/</url>
+                    <id>sample-snap</id>
+                    <url>http://3.104.223.90:8081/repository/sample-rel/</url>
                     <releases>
                         <enabled>false</enabled>
                     </releases>
