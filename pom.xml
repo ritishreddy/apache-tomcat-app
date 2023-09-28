@@ -96,13 +96,13 @@
 	<distributionManagement>
 
 	    <repository>
-	      <id>nexus</id>
-	      <name>Releases Nexus Repository</name>
+	      <id>NEXUS_ADMIN</id>
+	      <name>sample-rel</name>
 	      <url>http://3.104.223.90:8081/repository/sample-rel/</url>
 	    </repository>
 	    <snapshotRepository>
-	      <id>nexus</id>
-	      <name>Snapshot Nexus Repository </name>
+	      <id>NEXUS_ADMIN</id>
+	      <name>sample-snap</name>
 	      <url>http://3.104.223.90:8081/repository/sample-snap/</url>
 	    </snapshotRepository>
 	</distributionManagement>
