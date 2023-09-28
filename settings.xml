@@ -14,7 +14,7 @@
     <mirrors>
         <!-- Define a mirror for Nexus -->
         <mirror>
-            <id>mirrorId</id>
+            <id>NEXUS_ADMIN</id>
             <mirrorOf>central</mirrorOf>
             <name>sample-rel</name>
             <url>http://3.104.223.90:8081/repository/sample-rel/</url>
@@ -23,11 +23,11 @@
 
     <profiles>
         <profile>
-            <id>nexus</id>
+            <id>NEXUS_ADMIN</id>
             <!-- Enable snapshots for this profile -->
             <repositories>
                 <repository>
-                    <id>sample-snap</id>
+                    <id>NEXUS_ADMIN</id>
                     <url>http://3.104.223.90:8081/repository/sample-rel/</url>
                     <releases>
                         <enabled>false</enabled>
