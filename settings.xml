@@ -1,17 +1,47 @@
-<?xml version="1.0" encoding="UTF-8"?>
 <settings xmlns="http://maven.apache.org/SETTINGS/1.0.0"
-     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-     xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.0.0 http://maven.apache.org/xsd/settings-1.0.0.xsd">
-   <servers>
-     <server>
-       <id>nexus</id>
-       <username>nexus</username>
-       <password>nexus</password>
-     </server>
-   </servers>
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.0.0
+                              http://maven.apache.org/xsd/settings-1.0.0.xsd">
+    <servers>
+        <!-- Define credentials for Nexus -->
+        <server>
+            <id>NEXUS_ADMIN</id> <!-- This should match the id in your distributionManagement section -->
+            <username>nexus</username>
+            <password>nexus</password>
+        </server>
+    </servers>
 
-   <pluginGroups></pluginGroups>
-   <proxies></proxies>
-   <mirrors></mirrors>
-   <profiles></profiles>
+    <mirrors>
+        <!-- Define a mirror for Nexus -->
+        <mirror>
+            <id>mirrorId</id>
+            <mirrorOf>central</mirrorOf>
+            <name>Nexus Repository</name>
+            <url>http://your-nexus-server/repository/maven-central/</url>
+        </mirror>
+    </mirrors>
+
+    <profiles>
+        <profile>
+            <id>nexus</id>
+            <!-- Enable snapshots for this profile -->
+            <repositories>
+                <repository>
+                    <id>snapshots</id>
+                    <url>http://your-nexus-server/repository/maven-snapshots/</url>
+                    <releases>
+                        <enabled>false</enabled>
+                    </releases>
+                    <snapshots>
+                        <enabled>true</enabled>
+                    </snapshots>
+                </repository>
+            </repositories>
+        </profile>
+    </profiles>
+
+    <!-- Activate the Nexus profile -->
+    <activeProfiles>
+        <activeProfile>nexus</activeProfile>
+    </activeProfiles>
 </settings>
